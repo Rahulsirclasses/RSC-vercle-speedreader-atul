@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Main backgrounds - softer dark tones for better readability */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    /* Card backgrounds - slightly lighter than main background for depth */
+    --card: 222 84% 6.5%;
+    --card-foreground: 210 40% 95%;
+
+    /* Popover backgrounds */
+    --popover: 222 84% 6.5%;
+    --popover-foreground: 210 40% 95%;
+
+    /* Primary colors - optimized blue for reading apps */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 84% 4.9%;
+
+    /* Secondary colors - warmer grays for better contrast */
+    --secondary: 217 32% 17.5%;
+    --secondary-foreground: 210 40% 90%;
+
+    /* Muted colors - improved contrast for secondary text */
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Accent colors - subtle but visible */
+    --accent: 217 32% 17.5%;
+    --accent-foreground: 210 40% 90%;
+
+    /* Destructive colors - softer red for dark mode */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders - more visible but not harsh */
+    --border: 217 32% 17.5%;
+    --input: 217 32% 17.5%;
+
+    /* Focus ring - brighter for accessibility */
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Improved text rendering for better readability */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Enhanced reading experience */
+  .reading-content {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+
+  /* Better focus states for accessibility */
+  .focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+.bg-grid-white {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.03)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Enhanced animations with better performance */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+  50% {
+    transform: translateY(-15px) translateZ(0);
+  }
+}
+
+@keyframes float-medium {
+  0%,
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+  50% {
+    transform: translateY(-10px) translateZ(0);
+  }
+}
+
+@keyframes float-fast {
+  0%,
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+  50% {
+    transform: translateY(-5px) translateZ(0);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-medium {
+  animation: float-medium 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-fast {
+  animation: float-fast 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Reading-specific enhancements */
+.reading-text {
+  color: hsl(var(--foreground));
+  line-height: 1.8;
+  letter-spacing: 0.015em;
+}
+
+.reading-highlight {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Improved scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.8);
+}
+
+/* Better selection colors */
+::selection {
+  background-color: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+::-moz-selection {
+  background-color: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}

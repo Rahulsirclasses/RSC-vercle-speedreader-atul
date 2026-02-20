@@ -1,0 +1,60 @@
+.next/types/app/api/admin/users/[id]/approve/route.ts(283,7): error TS2344: Type '{ __tag__: "PATCH"; __param_position__: "second"; __param_type__: { params: { id: string; }; }; }' does not satisfy the constraint 'ParamCheck<RouteContext>'.
+  The types of '__param_type__.params' are incompatible between these types.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+.next/types/app/api/admin/users/[id]/disable/route.ts(283,7): error TS2344: Type '{ __tag__: "PATCH"; __param_position__: "second"; __param_type__: { params: { id: string; }; }; }' does not satisfy the constraint 'ParamCheck<RouteContext>'.
+  The types of '__param_type__.params' are incompatible between these types.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+.next/types/app/api/admin/users/[id]/enable/route.ts(283,7): error TS2344: Type '{ __tag__: "PATCH"; __param_position__: "second"; __param_type__: { params: { id: string; }; }; }' does not satisfy the constraint 'ParamCheck<RouteContext>'.
+  The types of '__param_type__.params' are incompatible between these types.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+.next/types/app/api/admin/users/[id]/make-admin/route.ts(283,7): error TS2344: Type '{ __tag__: "PATCH"; __param_position__: "second"; __param_type__: { params: { id: string; }; }; }' does not satisfy the constraint 'ParamCheck<RouteContext>'.
+  The types of '__param_type__.params' are incompatible between these types.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+.next/types/app/api/auth/[...nextauth]/route.ts(12,13): error TS2344: Type 'OmitWithTag<typeof import("C:/Users/ADMIN/Desktop/rsc/reading-engine-features/app/api/auth/[...nextauth]/route"), "config" | "DELETE" | "POST" | "PATCH" | "generateStaticParams" | "revalidate" | ... 9 more ... | "PUT", "">' does not satisfy the constraint '{ [x: string]: never; }'.
+  Property 'authOptions' is incompatible with index signature.
+    Type 'AuthOptions' is not assignable to type 'never'.
+app/drills/comprehension-time/page.tsx(37,31): error TS2339: Property '_id' does not exist on type 'Passage'.
+app/drills/fixation-breaker/page.tsx(100,22): error TS2552: Cannot find name 'fallbackPassage'. Did you mean 'fallbackPassages'?
+app/drills/fixation-breaker/page.tsx(106,31): error TS2339: Property '_id' does not exist on type '{ timestamp: number; id: string; title: string; text: string; topic: string; difficulty: string; wordCount: number; estimatedTime: string; }'.
+app/drills/fixation-breaker/page.tsx(108,33): error TS2339: Property 'content' does not exist on type '{ timestamp: number; id: string; title: string; text: string; topic: string; difficulty: string; wordCount: number; estimatedTime: string; }'.
+app/drills/fixation-breaker/page.tsx(109,36): error TS2339: Property 'content' does not exist on type '{ timestamp: number; id: string; title: string; text: string; topic: string; difficulty: string; wordCount: number; estimatedTime: string; }'.
+app/drills/fixation-breaker/page.tsx(110,34): error TS2339: Property 'category' does not exist on type '{ timestamp: number; id: string; title: string; text: string; topic: string; difficulty: string; wordCount: number; estimatedTime: string; }'.
+app/drills/fixation-breaker/page.tsx(111,37): error TS2339: Property 'category' does not exist on type '{ timestamp: number; id: string; title: string; text: string; topic: string; difficulty: string; wordCount: number; estimatedTime: string; }'.
+app/drills/fixation-breaker/page.tsx(119,20): error TS2552: Cannot find name 'fallbackPassage'. Did you mean 'fallbackPassages'?
+app/drills/running-words/page.tsx(26,39): error TS2304: Cannot find name 'getRandomPassage'.
+app/drills/running-words/page.tsx(28,11): error TS2552: Cannot find name 'setPassage'. Did you mean 'fetchPassage'?
+app/drills/running-words/page.tsx(28,22): error TS2304: Cannot find name 'fallbackPassage'.
+app/drills/running-words/page.tsx(29,11): error TS2304: Cannot find name 'setIsLoading'.
+app/drills/running-words/page.tsx(44,9): error TS2552: Cannot find name 'setPassage'. Did you mean 'fetchPassage'?
+app/drills/running-words/page.tsx(47,9): error TS2552: Cannot find name 'setPassage'. Did you mean 'fetchPassage'?
+app/drills/running-words/page.tsx(47,20): error TS2304: Cannot find name 'fallbackPassage'.
+app/drills/running-words/page.tsx(49,7): error TS2304: Cannot find name 'setIsLoading'.
+app/drills/speed-sprint/page.tsx(20,22): error TS2304: Cannot find name 'fallbackPassage'.
+app/drills/speed-sprint/page.tsx(26,31): error TS2339: Property '_id' does not exist on type 'Passage'.
+app/drills/speed-sprint/page.tsx(39,20): error TS2304: Cannot find name 'fallbackPassage'.
+components/auth/auth-form.tsx(71,27): error TS2339: Property 'resetPassword' does not exist on type 'AuthContextType'.
+components/drills/drill-content.tsx(170,14): error TS2739: Type '{ text: string; wpm: number; mode: "normal" | "flashing"; chunkSize: number; onComplete: () => void; }' is missing the following properties from type 'SpeedReaderProps': isPlaying, progress, onProgressChange
+components/drills/fixation-breaker-drill.tsx(48,26): error TS7006: Parameter 'sentence' implicitly has an 'any' type.
+components/drills/fixation-breaker-drill.tsx(48,36): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/drills/fixation-breaker-drill.tsx(195,26): error TS7006: Parameter 'sentence' implicitly has an 'any' type.
+components/drills/fixation-breaker-drill.tsx(195,36): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/ui/chart.tsx(119,7): error TS2339: Property 'payload' does not exist on type 'Omit<Omit<Props<ValueType, NameType>, PropertiesReadFromContext> & { active?: boolean | undefined; allowEscapeViewBox?: AllowInDimension | undefined; ... 24 more ...; wrapperStyle?: CSSProperties | undefined; } & ClassAttributes<...> & HTMLAttributes<...> & { ...; }, "ref">'.
+components/ui/chart.tsx(124,7): error TS2339: Property 'label' does not exist on type 'Omit<Omit<Props<ValueType, NameType>, PropertiesReadFromContext> & { active?: boolean | undefined; allowEscapeViewBox?: AllowInDimension | undefined; ... 24 more ...; wrapperStyle?: CSSProperties | undefined; } & ClassAttributes<...> & HTMLAttributes<...> & { ...; }, "ref">'.
+components/ui/chart.tsx(188,25): error TS7006: Parameter 'item' implicitly has an 'any' type.
+components/ui/chart.tsx(188,31): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/ui/chart.tsx(264,41): error TS2344: Type '"payload" | "verticalAlign"' does not satisfy the constraint '"string" | "key" | "media" | "spacing" | "order" | "height" | "width" | "rotate" | "scale" | "cursor" | "fill" | "stroke" | "strokeWidth" | "fontFamily" | "fontSize" | "fontWeight" | ... 433 more ... | "onBBoxUpdate"'.
+  Type '"payload"' is not assignable to type '"string" | "key" | "media" | "spacing" | "order" | "height" | "width" | "rotate" | "scale" | "cursor" | "fill" | "stroke" | "strokeWidth" | "fontFamily" | "fontSize" | "fontWeight" | ... 433 more ... | "onBBoxUpdate"'.
+components/ui/chart.tsx(275,19): error TS2339: Property 'length' does not exist on type '{}'.
+components/ui/chart.tsx(288,18): error TS2339: Property 'map' does not exist on type '{}'.
+components/ui/chart.tsx(288,23): error TS7006: Parameter 'item' implicitly has an 'any' type.
+lib/db/user.ts(61,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+      Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+        Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+lib/db/user.ts(65,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+      Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+        Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+lib/db/user.ts(67,59): error TS2339: Property '_id' does not exist on type 'never'.
