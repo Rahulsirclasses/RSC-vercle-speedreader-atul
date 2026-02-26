@@ -2,6 +2,12 @@ import mongoose from "mongoose"
 
 const MONGODB_URI = process.env.MONGODB_URI!
 
+// DEBUG LOG: Print a masked version of the URI to check if Vercel is using the correct one
+if (MONGODB_URI) {
+  const maskedUri = MONGODB_URI.replace(/:([^:@]+)@/, ':****@');
+  console.log("🔍 [DEBUG MONGODB] Active Connection String:", maskedUri);
+}
+
 if (!MONGODB_URI) {
   throw new Error(
     "Please define the MONGODB_URI environment variable in .env.local"
