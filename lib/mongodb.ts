@@ -38,15 +38,22 @@ async function connectDB(): Promise<typeof mongoose> {
   }
 
   if (!cached.promise) {
+    // Force Mongoose to use the correct database name even if the URI parser gets confused by Vercel environment variables
+    const dbNameMatch = MONGODB_URI.match(/\/([^/?]+)(?:\?|$)/);
+    const databaseName = dbNameMatch ? dbNameMatch[1] : 'speed-reading-app';
+
     const opts = {
       bufferCommands: false,
       maxPoolSize: 10, // connection pooling
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 45000,
+      dbName: databaseName, // Explicitly tell MongoDB which database to authenticate against
     }
 
+    console.log(`🚀 [MongoDB] Attempting connection to database: ${databaseName}`);
+
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
-      console.log("MongoDB connected")
+      console.log(`✅ MongoDB connected successfully to ${databaseName}`)
       return mongoose
     })
   }
