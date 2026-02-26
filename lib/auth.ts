@@ -19,6 +19,8 @@ export const authOptions: NextAuthOptions = {
                     const user = await loginUser(credentials.email, credentials.password)
                     return user
                 } catch (error: any) {
+                    console.error("❌ [Credentials] Error in authorize:", error);
+
                     if (
                         error.message === "PENDING_APPROVAL" ||
                         error.message === "ACCOUNT_DISABLED"
